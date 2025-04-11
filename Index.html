@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كاشير مزاجنجي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            direction: rtl;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .category {
+            width: 45%;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .category h2 {
+            margin-top: 0;
+        }
+        .product, .add-product {
+            margin-bottom: 10px;
+        }
+        .product span {
+            display: inline-block;
+            width: 70%;
+        }
+        .product button, .add-product button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .invoice {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .invoice h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>كاشير مزاجنجي</h1>
+
+    <div class="container">
+        <div class="category">
+            <h2>عصائر فريش</h2>
+            <div class="product"><span>مانجا - ٤٠</span><button onclick="addToCart('مانجا', 40)">أضف</button></div>
+            <div class="product"><span>فراولة - ٣٥</span><button onclick="addToCart('فراولة', 35)">أضف</button></div>
+            <div class="product"><span>جوافة - ٣٥</span><button onclick="addToCart('جوافة', 35)">أضف</button></div>
+            <div class="product"><span>جوافة ب لبن - ٤٠</span><button onclick="addToCart('جوافة ب لبن', 40)">أضف</button></div>
+            <div class="product"><span>موز - ٤٠</span><button onclick="addToCart('موز', 40)">أضف</button></div>
+            <div class="product"><span>موز بلبن - ٤٠</span><button onclick="addToCart('موز بلبن', 40)">أضف</button></div>
+            <div class="product"><span>برتقال - ٣٠</span><button onclick="addToCart('برتقال', 30)">أضف</button></div>
+            <div class="product"><span>بطيخ - ٣٥</span><button onclick="addToCart('بطيخ', 35)">أضف</button></div>
+            <div class="product"><span>ليمون - ٢٥</span><button onclick="addToCart('ليمون', 25)">أضف</button></div>
+            <div class="product"><span>ليمون نعناع - ٣٠</span><button onclick="addToCart('ليمون نعناع', 30)">أضف</button></div>
+            <div class="product"><span>كيوي - ٦٠</span><button onclick="addToCart('كيوي', 60)">أضف</button></div>
+            <div class="product"><span>افوكادو - ٦٥</span><button onclick="addToCart('افوكادو', 65)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>الاسموزي</h2>
+            <div class="product"><span>مانجه - ٤٠</span><button onclick="addToCart('مانجه (سموزي)', 40)">أضف</button></div>
+            <div class="product"><span>فراوله - ٣٥</span><button onclick="addToCart('فراوله (سموزي)', 35)">أضف</button></div>
+            <div class="product"><span>كيوي - ٣٥</span><button onclick="addToCart('كيوي (سموزي)', 35)">أضف</button></div>
+            <div class="product"><span>بلوميري - ٣٥</span><button onclick="addToCart('بلوميري (سموزي)', 35)">أضف</button></div>
+            <div class="product"><span>بطيخ - ٤٠</span><button onclick="addToCart('بطيخ (سموزي)', 40)">أضف</button></div>
+            <div class="product"><span>ليمون - ٣٠</span><button onclick="addToCart('ليمون (سموزي)', 30)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>الوافل</h2>
+            <div class="product"><span>وافل شوكولاته - ٣٥</span><button onclick="addToCart('وافل شوكولاته', 35)">أضف</button></div>
+            <div class="product"><span>وافل ميكس - ٤٥</span><button onclick="addToCart('وافل ميكس', 45)">أضف</button></div>
+            <div class="product"><span>وافل فواكه - ٥٠</span><button onclick="addToCart('وافل فواكه', 50)">أضف</button></div>
+            <div class="product"><span>وافل مزاجنجي - ٦٠</span><button onclick="addToCart('وافل مزاجنجي', 60)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>الكوكتيل</h2>
+            <div class="product"><span>فلورفل (مانجه ـ فراوله ـ جوافه) - ٤٠</span><button onclick="addToCart('فلورفل', 40)">أضف</button></div>
+            <div class="product"><span>كلاسيك (مانجو ـ فراولة - جوافة - ايس) - ٤٥</span><button onclick="addToCart('كلاسيك', 45)">أضف</button></div>
+            <div class="product"><span>زبادو فواكة - ٤٥</span><button onclick="addToCart('زبادو فواكة', 45)">أضف</button></div>
+            <div class="product"><span>زبادو بالعسل - ٣٥</span><button onclick="addToCart('زبادو بالعسل', 35)">أضف</button></div>
+            <div class="product"><span>ترويتال (موز ـ مانجة ـ ايس ـ جوز هند) - ٤٥</span><button onclick="addToCart('ترويتال', 45)">أضف</button></div>
+            <div class="product"><span>افوكادو ميكس - ٦٥</span><button onclick="addToCart('افوكادو ميكس', 65)">أضف</button></div>
+            <div class="product"><span>نينا كولادا (اناناس علي جوز هند) - ٣٥</span><button onclick="addToCart('نينا كولادا', 35)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>ايس كريم</h2>
+            <div class="product"><span>٢ بوله - ٢٠</span><button onclick="addToCart('ايس كريم (٢ بوله)', 20)">أضف</button></div>
+            <div class="product"><span>٣ بوله - ٣٠</span><button onclick="addToCart('ايس كريم (٣ بوله)', 30)">أضف</button></div>
+            <div class="product"><span>اسبشيل - ٣٥</span><button onclick="addToCart('ايس كريم اسبشيل', 35)">أضف</button></div>
+            <div class="product"><span>اوريو مانتس - ٤٠</span><button onclick="addToCart('ايس كريم اوريو مانتس', 40)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>مشروبات غازيه</h2>
+            <div class="product"><span>مياه صغيره - ٨</span><button onclick="addToCart('مياه صغيره', 8)">أضف</button></div>
+            <div class="product"><span>مياه كبيره - ١٥</span><button onclick="addToCart('مياه كبيره', 15)">أضف</button></div>
+            <div class="product"><span>مشروبات غازيه - ٢٥ ل ٣٠</span><button onclick="addToCart('مشروبات غازيه', 25)">أضف</button></div>
+            <div class="product"><span>ريدبول - ٦٥</span><button onclick="addToCart('ريدبول', 65)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>مشروبات ساخنه</h2>
+            <div class="product"><span>شاي - ١٠</span><button onclick="addToCart('شاي', 10)">أضف</button></div>
+            <div class="product"><span>شاي حليب - ٢٠</span><button onclick="addToCart('شاي حليب', 20)">أضف</button></div>
+            <div class="product"><span>شاي اخضر - ١٥</span><button onclick="addToCart('شاي اخضر', 15)">أضف</button></div>
+            <div class="product"><span>شاي فواكه - ١٥</span><button onclick="addToCart('شاي فواكه', 15)">أضف</button></div>
+            <div class="product"><span>ينسون - ١٥</span><button onclick="addToCart('ينسون', 15)">أضف</button></div>
+            <div class="product"><span>نعناع - ١٥</span><button onclick="addToCart('نعناع', 15)">أضف</button></div>
+            <div class="product"><span>كركديه - ١٥</span><button onclick="addToCart('كركديه', 15)">أضف</button></div>
+            <div class="product"><span>قرفه ساده - ١٥</span><button onclick="addToCart('قرفه ساده', 15)">أضف</button></div>
+            <div class="product"><span>شوت شوكليت - ٤٠</span><button onclick="addToCart('شوت شوكليت', 40)">أضف</button></div>
+            <div class="product"><span>هوت سيدر - ٣٠</span><button onclick="addToCart('هوت سيدر', 30)">أضف</button></div>
+            <div class="product"><span>سحلب - ٣٥</span><button onclick="addToCart('سحلب', 35)">أضف</button></div>
+            <div class="product"><span>سحلب اوريو - ٤٥</span><button onclick="addToCart('سحلب اوريو', 45)">أضف</button></div>
+            <div class="product"><span>سحلب ساده مكسرات - ٣٥</span><button onclick="addToCart('سحلب ساده مكسرات', 35)">أضف</button></div>
+            <div class="product"><span>سحلب فواكه - ٤٥</span><button onclick="addToCart('سحلب فواكه', 45)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>قهوه</h2>
+            <div class="product"><span>قهوه تركي - ٢٠</span><button onclick="addToCart('قهوه تركي', 20)">أضف</button></div>
+            <div class="product"><span>اسبريسو - ٢٥</span><button onclick="addToCart('اسبريسو', 25)">أضف</button></div>
+            <div class="product"><span>اسبريسو ميكاتو - ٣٠</span><button onclick="addToCart('اسبريسو ميكاتو', 30)">أضف</button></div>
+            <div class="product"><span>كابتشينو - ٤٠</span><button onclick="addToCart('كابتشينو', 40)">أضف</button></div>
+            <div class="product"><span>لاتيه - ٤٠</span><button onclick="addToCart('لاتيه', 40)">أضف</button></div>
+            <div class="product"><span>امريكان كوفي - ٣٠</span><button onclick="addToCart('امريكان كوفي', 30)">أضف</button></div>
+            <div class="product"><span>قهوه بندق - ٣٠</span><button onclick="addToCart('قهوه بندق', 30)">أضف</button></div>
+            <div class="product"><span>قهوه فرنساوي - ٣٠</span><button onclick="addToCart('قهوه فرنساوي', 30)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>بنكيك</h2>
+            <div class="product"><span>بنكيك كلاسيك (٦ قطع) - ٣٠</span><button onclick="addToCart('بنكيك كلاسيك (٦ قطع)', 30)">أضف</button></div>
+            <div class="product"><span>بنكيك ميكس - ٣٥</span><button onclick="addToCart('بنكيك ميكس', 35)">أضف</button></div>
+            <div class="product"><span>بنكيك مزاجنجي - ٤٥</span><button onclick="addToCart('بنكيك مزاجنجي', 45)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>اضافات</h2>
+            <div class="product"><span>دارك شوكلت - ٥</span><button onclick="addToCart('اضافة دارك شوكلت', 5)">أضف</button></div>
+            <div class="product"><span>شوكلت ميلك - ١٠</span><button onclick="addToCart('اضافة شوكلت ميلك', 10)">أضف</button></div>
+            <div class="product"><span>لوتس - ١٠</span><button onclick="addToCart('اضافة لوتس', 10)">أضف</button></div>
+            <div class="product"><span>وايت شوكلت - ١٠</span><button onclick="addToCart('اضافة وايت شوكلت', 10)">أضف</button></div>
+            <div class="product"><span>بلو ميري - ١٥</span><button onclick="addToCart('اضافة بلو ميري', 15)">أضف</button></div>
+            <div class="product"><span>بوستاشيو - ٢٠</span><button onclick="addToCart('اضافة بوستاشيو', 20)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>ميلك شيك</h2>
+            <div class="product"><span>ميلك شيك شوكولاته - ٤٠</span><button onclick="addToCart('ميلك شيك شوكولاته', 40)">أضف</button></div>
+            <div class="product"><span>ميلك شيك فانيليا - ٤٠</span><button onclick="addToCart('ميلك شيك فانيليا', 40)">أضف</button></div>
+            <div class="product"><span>ميلك شيك فراوله - ٤٠</span><button onclick="addToCart('ميلك شيك فراوله', 40)">أضف</button></div>
+            <div class="product"><span>ميلك شيك مانجا - ٤٠</span><button onclick="addToCart('ميلك شيك مانجا', 40)">أضف</button></div>
+            <div class="product"><span>ميلك شيك اوريو - ٤٥</span><button onclick="addToCart('ميلك شيك اوريو', 45)">أضف</button></div>
+            <div class="product"><span>ميلك شيك كيت كات - ٦٥</span><button onclick="addToCart('ميلك شيك كيت كات', 65)">أضف</button></div>
+            <div class="product"><span>ميلك شيك انيكرز - ٦٥</span><button onclick="addToCart('ميلك شيك انيكرز', 65)">أضف</button></div>
+            <div class="product"><span>ميلك شيك اتشيز كيك - ٦٥</span><button onclick="addToCart('ميلك شيك اتشيز كيك', 65)">أضف</button></div>
+        </div>
+
+        <div class="category">
+            <h2>هيبر</h2>
+            <div class="product"><span>موخيتو - ٣٠</span><button onclick="addToCart('موخيتو', 30)">أضف</button></div>
+            <div class="product"><span>صن شاين - ٣٥</span><button onclick="addToCart('صن شاين', 35)">أضف</button></div>
+            <div class="product"><span>يلو هواي - ٦٥</span><button onclick="addToCart('يلو هواي', 65)">أضف</button></div>
+ <div class="category">
+            <h2>الشيشه</h2>
+            <div class="product"><span>قص - 10</span><button onclick="addToCart('قص',10)">أضف</button></div>
+            <div class="product"><span>سلوم - 10</span><button onclick="addToCart('سلوم', 10)">أضف</button></div>
+            <div class="product"><span>فواكه - 40</span><button onclick="addToCart('فواكه', 50)">أضف</button></div>
+<!-- إظهار الفاتورة -->
+        <div class="category">
+            <h2>الفاتورة</h2>
+            <div class="invoice">
+                <h3>تفاصيل الطلب</h3>
+                <div id="cart"></div>
+                <div class="total">
+                    <p>إجمالي: <span id="totalAmount">0</span> جنيه</p>
+                    <label for="discount">خصم (جنيه): </label>
+                    <input type="number" id="discount" value="0" oninput="updateTotal()">
+                    <p>إجمالي بعد الخصم: <span id="finalAmount">0</span> جنيه</p>
+                </div>
+                <button onclick="printInvoice()">طباعة الفاتورة</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartHTML = "";
+            total = 0;
+            cart.forEach(item => {
+                cartHTML += `<p>${item.product}: ${item.price} جنيه</p>`;
+                total += item.price;
+            });
+            document.getElementById("cart").innerHTML = cartHTML;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let discount = parseFloat(document.getElementById("discount").value) || 0;
+            let finalAmount = total - discount;
+            document.getElementById("totalAmount").innerText = total;
+            document.getElementById("finalAmount").innerText = finalAmount > 0 ? finalAmount : 0;
+        }
+
+        function printInvoice() {
+            let invoiceContent = document.getElementById("cart").innerHTML + 
+                                 "<p>إجمالي: " + total + " جنيه</p>" + 
+                                 "<p>خصم: " + document.getElementById("discount").value + " جنيه</p>" +
+                                 "<p>إجمالي بعد الخصم: " + document.getElementById("finalAmount").innerText + " جنيه</p>";
+            let newWindow = window.open();
+            newWindow.document.write("<html><body><h1>فاتورة</h1>" + invoiceContent + "</body></html>");
+            newWindow.print();
+        }
+    </script>
+</body>
+</html>
